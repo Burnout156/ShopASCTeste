@@ -1,0 +1,17 @@
+<!-- order.component.html -->
+
+<h2>Lista de Pedidos</h2>
+
+<div *ngFor="let order of orders">
+  <h3>ID do Pedido: {{ order.id }}</h3>
+  <p>Data do Pedido: {{ order.orderDate | date }}</p>
+  <p>Cliente: {{ order.customerName }}</p>
+  <p>Endereço de Entrega: {{ order.shippingAddress }}</p>
+  <!-- <p>Produto: {{ order.product.name }}</p> -->
+  <!-- <p>Quantidade: {{ order.quantity }}</p> -->
+  <hr />
+</div>
+
+<div *ngIf="orders.length === 0">
+  <p>Nenhum pedido encontrado.</p>
+</div>

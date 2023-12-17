@@ -1,0 +1,37 @@
+header {
+    align-items: center;
+    background: #cf0000;
+    display: flex;
+    padding: 15px 40px;
+    justify-content: space-between;
+
+    > ul {
+        display: flex;
+        gap: 50px;
+        margin: 0;
+        padding: 0;
+        
+        > li {
+            cursor: pointer;
+            color: #FFFF;
+            list-style-type: none;
+            font-size: 18px;
+            font-weight: 600;
+
+            &:hover{
+                color: #000;
+            }
+        }
+    }
+
+    > a {
+        color: #FFF;
+        > i {
+            font-size: 22px;
+        }
+
+        &:hover{
+            color: #000;
+        }
+    }
+}

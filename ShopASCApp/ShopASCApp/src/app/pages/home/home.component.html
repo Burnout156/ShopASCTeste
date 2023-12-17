@@ -1,0 +1,53 @@
+<section>
+    <div>
+        <div class="top-list-search-input">
+            <h2>Produtos mais vendidos</h2>
+            <div class="search-input">
+                <input type="text" placeholder="Pesquisar nome do produto..." (input)="onSearch()"
+                    [(ngModel)]="searchMoreSale">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+        <div class="list-cards">
+            <div class="card" *ngFor="let productMoreSale of productsMoreSaleFiltered">
+                <h4>{{productMoreSale.name}}</h4>
+                <i class="fa-solid fa-star"></i>
+                <div>
+                    <p>{{ productMoreSale.preco | currency:'BRL':'symbol':'1.2-2' }}</p>
+                    <p *ngIf="productMoreSale.promotion === true">{{ productMoreSale.promotionValue |
+                        currency:'BRL':'symbol':'1.2-2' }}</p>
+                </div>
+                <p>Categoria: {{getCategoryProduct(productMoreSale.category)}}</p>
+            </div>
+            <p *ngIf="productsMoreSaleFiltered.length === 0" class="message-error">
+                <i class="fa-solid fa-triangle-exclamation"></i> 
+                Não há produtos para esse nome...Por favor, tente novamente!</p>
+        </div>
+    </div>
+
+
+    <div>
+        <div class="top-list-search-input promotion">
+            <h2>Produtos em Promoção</h2>
+            <div class="search-input">
+                <input type="text" placeholder="Pesquisar nome do produto..." (input)="onSearchProductsPromotion()"
+                    [(ngModel)]="searchProductsPromotion">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+        <div class="list-cards">
+            <div class="card" *ngFor="let productPromotion of productsInPromotionFiltered">
+                <h4>{{productPromotion.name}}</h4>
+                <i class="fa-solid fa-star"></i>
+                <div>
+                    <p>{{ productPromotion.price | currency:'BRL':'symbol':'1.2-2' }}</p>
+                    <p>{{ productPromotion.promotionValue | currency:'BRL':'symbol':'1.2-2' }}</p>
+                </div>
+                <p>Categoria: {{getCategoryProduct(productPromotion.category)}}</p>
+            </div>
+        </div>
+        <p *ngIf="productsInPromotionFiltered.length === 0" class="message-error">
+            <i class="fa-solid fa-triangle-exclamation"></i> 
+            Não há produtos para esse nome...Por favor, tente novamente!</p>
+    </div>
+</section>

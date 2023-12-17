@@ -1,0 +1,8 @@
+<button (click)="navigateCreateProduct()" class="btn btn-primary">Criar Novo Produto</button>
+
+<div *ngFor="let product of products">
+  <h3>{{ product.name }}</h3>
+  <p>Preço: ${{ product.price }}</p>
+  <p>Categoria: {{ product.category.name }}</p>
+  <button (click)="addToCart(product)">Adicionar ao Carrinho</button>
+</div>

@@ -1,0 +1,58 @@
+section {
+    padding: 60px 40px;
+}
+
+.list-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+
+    > .card {
+        padding: 20px;
+        height: 220px;
+        max-width: 25%;
+        max-height: 220px;
+        width: 24.25%;
+    }
+}
+
+.top-list-search-input {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0 30px 0;
+
+    &.promotion {
+        padding-top: 60px;
+    }
+}
+
+.search-input {
+    width: 17%;
+    border: 2px solid #000;
+    border-radius: 15px;
+    padding: 0 15px;
+
+    > input {
+        width: 92%;
+        border: none;
+
+        &:focus-visible {
+            outline: none;
+        }
+    }
+
+    > i {
+        color: red;
+    }
+}
+
+.message-error {
+    font-size: 18px;
+    font-weight: 400;
+
+    > i {
+        color: red;
+        font-size: 25px;
+    }
+}
