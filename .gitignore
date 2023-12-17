@@ -1,0 +1,68 @@
+# Angular
+ShopASCApp/node_modules/
+ShopASCApp/dist/
+ShopASCApp/.env*
+ShopASCApp/.ng_build/
+ShopASCApp/.ng_deploy/
+ShopASCApp/*.log
+
+# ASP.NET API
+ShoASCAPI/bin/
+ShoASCAPI/obj/
+ShoASCAPI/*.user
+ShoASCAPI/*.suo
+ShoASCAPI/*.bak
+ShoASCAPI/*.vscode/
+ShoASCAPI/aspnetcore-runtime-*
+ShoASCAPI/*.sqlite
+ShoASCAPI/Logs/
+ShoASCAPI/wwwroot/
+ShoASCAPI/appsettings.Development.json
+ShoASCAPI/appsettings.Production.json
+
+# Visual Studio Code
+.vscode/
+
+# .NET
+*.dll
+*.pdb
+*.exe
+*.user
+*.suo
+*.bak
+/Debug/
+/Release/
+
+# Visual Studio
+.vs/
+
+# Rider
+.idea/
+*.sln.iml
+*.ide-workspace
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+
+# Node.js
+npm-debug.log
+yarn-error.log
+
+# JetBrains
+*.suo
+*.user
+*.iws
+*.iml
+.idea/
+*.db-shm
+*.db-wal
+
+# Logs
+*.log
+
+# Temp files
+*~
